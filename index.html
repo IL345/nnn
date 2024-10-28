@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background:black;
+   
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    background-image: url(index1.jpg);
+    background-position: center;
+    background-size:cover;
+    position:none;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+
+
+
+.logo {
+   font-size: 19px;
+   font-weight: bold;
+}
+
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color:#fff;
+        }
+
+.menu-toggle.active {
+    transform: rotate(90deg);
+}
+
+.navbar {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 10px 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+        
+.navbar ul li a:hover {
+    background: #e74c3c;
+}
+
+
+
+
+.content {
+    text-align: left;
+}
+
+
+/* Produk Section */
+.produk-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.produk-item {
+    border: 1px solid gold;
+    padding: 10px;
+    width: 30%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.produk-item img {
+    max-width: 100%;
+}
+
+.produk-item h3 {
+    font-size: 1.2em;
+    color:#fff;
+}
+
+.produk-item p {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.produk-item h2 {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.produk-item h4 {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.produk-item h1 {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.produk-item h5 {
+    color: #fff;
+}
+
+.produk-item a {
+    display: block;
+    margin-top: 10px;
+    color:#333;
+    text-decoration: none;
+}
+
+
+.buy-button {
+   display: inline-block;
+   padding: 1px 1px;
+   font-size: 1em;
+   color: #fff;
+   background-color:gold;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.buy-button:hover {
+    background:  #3498db;
+    box-shadow: 0 0 8px rgba(0, 455, 255, 0.5);
+}
+
+/* Hero Section */
+.hero {
+  background-image: url(index2.jpg);
+    background-position: center;
+    background-size:cover;
+    text-align: left;
+    padding: 158px 0;
+}
+
+.hero h2 {
+   font-size: 2em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.hero button {
+    display: inline-block;
+    padding: 10px 17px;
+    border: none;
+    border-radius:4px ;
+    background: gold;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    transform: scale(1)
+}
+
+.hero button:hover {
+    background:  #3498db;
+    box-shadow: 0 0 8px rgba(0, 455, 255, 0.5);
+}
+
+/* Hero Section */
+.hero1 {
+   background-image: url(index3.jpg);
+   background-position: center;
+   background-size:cover;
+   text-align: left;
+   padding: 50px 0;
+}
+
+.hero1 h2 {
+    font-size: 2em;
+    color:#fff;
+}
+
+.hero1 p {
+    font-size: 1.2em;
+    color:#fff;
+}
+.hero1 button {
+    padding: 10px 17px;
+    border: none;
+    border-radius:20px ;
+    background: deepskyblue;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    transform: scale(1)
+}
+
+/* Hero Section */
+.hero2 {
+   background:#000;
+   text-align: left;
+   padding: 50px 0;
+}
+
+.hero2 h2 {
+    font-size: 2em;
+    color:#fff;
+}
+
+.hero2 p {
+    font-size: 1.2em;
+    color:#fff;
+}
+.hero2 button {
+    padding: 10px 17px;
+    border: none;
+    border-radius:20px ;
+    background: deepskyblue;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    transform: scale(1)
+}
+
+.slider {
+    position: relative;
+    max-width: 600px; /* Sesuaikan lebar slider */
+    margin: auto;
+    overflow: hidden;
+    border:; /* Batas slider */
+    border-radius: ; /* Sudut melengkung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+.slides {
+   display: flex;
+   transition: transform 1s ease; /* Animasi transisi lebih lambat */
+}
+
+ .slides img {
+   width: 100%; /* Gambar menyesuaikan lebar slider */
+   flex-shrink: 0; /* Mencegah gambar mengecil */
+}
+
+
+
+/* Info Perusahaan Section */
+.info-perusahaan {
+    padding: 20px 0;
+    background: #000;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color:#fff;
+}
+.contact-info h3 {
+    margin: 10px 0;
+    color:#fff;
+}
+.contact-info h2 {
+    margin: 10px 0;
+    color:#fff;
+}
+.contact-info h1 {
+    margin: 10px 0;
+    color:#fff;
+}
+.contact-info h4 {
+    margin: 10px 0;
+    color:#fff;
+}
+
+.info-perusahaan a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {   
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    background: #000;
+    background-position: center;
+    background-size:cover;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+  .carousel1-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile devices */
+      scroll-behavior: smooth;
+      gap: 10px; /* Add spacing between slides */
+      padding: 20px;
+    }
+
+    .carousel1-slide {
+      flex: 0 0 auto; /* Prevent shrinking or expanding */
+      scroll-snap-align: center; /* Snap to center */
+      width: 300px;
+      height: 200px;
+      background-color: #ccc;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .carousel1-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .carousel1-description {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      font-size: 16px;
+    }
+
+    /* Hide scrollbar (optional) */
+    .carousel1-container::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel1-container {
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+
+
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px; /* Jarak antar item */
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.scroll-item {
+    flex: 0 0 250px; /* Lebar tiap item */
+    background-color: gold;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.scroll-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.scroll-item p {
+   font-size: 14px;
+   color: #333;
+   margin-top: 10px;
+}
+
+.scroll-item span {
+    font-size: 12px;
+    color: #777;
+}
+
+   .form-control {
+            margin-bottom: 15px;
+        }
+        .form-control label {
+            display: block;
+            text-align:left;
+            color:#fff;
+            line-height:1.5;
+        }
+        .form-control input, .form-control textarea {
+            width: 100%;
+            padding: 9px;
+            border-radius: 4px;
+            border:none;
+            border: 1px solid gold;
+            font-size: 16px;
+            color:black;
+        }
+        
+       
+     .form-control button{
+    color: #fff;
+    text-decoration: none;
+    background-color:dodgerblue;
+    float:left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 8px 20px;
+    border-radius: 5px;
+    border:none;
+    cursor: pointer;
+ } 
+.form-control button:hover{
+background:#E3651D;
+}
+
+
+
+
+ </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FruitsFood</title>
+    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+         <div class="header-container">
+            <div class="logo"><h3><a href="#"><img src="logo.png"style="width:100px;height:30px;"></a></h3></div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        </div>
+    </header>
+
+
+   <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="index.html"><font size="4"align="right"style="color:black;"><i class="fas fa-home"></i></font>            Home</a></li>
+            <li><a href="produk.html"><font size="4"align="right"style="color:black;"><i class="fas fa-shopping-cart"></i></font>  Produk</a></li>
+            <li><a href="blog.html"><font size="4"align="right"style="color:black;"><i class="fas fa-blog"></i></font>  Blog</a></li>
+        </ul>
+   </nav>
+
+
+    <section class="hero">
+        <div class="container">
+            <h4></h4>
+            <p></p>
+            <p align="center"><button type="button"><small><a href="semuaproduk.html"><font color="black">Jelajahi Semua Produk</a></font></small></button><br>
+    </section>
+<h3><marquee><font color="gold">Beli produk kami disini,dan jadi pelanggan setia kami</font></marquee></h3>
+     <section class="hero1">
+        <div class="container">
+            <h4><p align="center">Temukan Produk Terbaik Kami</p></h4>
+            <p><p align="center">Kualitas Terjamin dengan Harga Terbaik</p></p>
+           
+            <div class="nav">
+           
+            </div>
+          </div>
+    </section>
+<section class="hero2">
+        <div class="container">
+       <div class="slider">
+        <div class="slides">
+            <img src="index24.jfif" alt="Gambar 3">
+            <img src="index27.jpg" alt="Gambar 1">
+            <img src="index25.jpg" alt="Gambar 2">
+            <img src="index26.png" alt="Gambar 3">
+        </div>
+    </div>   
+    </section>
+
+       <h3><p align="center"><font color="gold">Produk Kami</font></p></h3>
+       <div class="carousel1-container">
+    <div class="carousel1-slide">
+      <img src="index4.jpg" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Mangga</font></a></div>
+    </div>
+   <div class="carousel1-slide">
+      <img src="index5.jpg" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Lengkeng</font></a></div>
+    </div>
+  <div class="carousel1-slide">
+      <img src="index6.jpg" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Jambu</font></a></div>
+    </div>
+    <div class="carousel1-slide">
+      <img src="index7.png" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Pisang</font></a></div>
+    </div>
+   <div class="carousel1-slide">
+      <img src="index8.jpg" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Durian</font></a></div>
+    </div>
+    <div class="carousel1-slide">
+      <img src="index9.jpg" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Alpukat</font></a></div>
+    </div>
+     <div class="carousel1-slide">
+      <img src="index10.jpg" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Salak</font></a></div>
+    </div>
+    <div class="carousel1-slide">
+      <img src="index11.jpg" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Jeruk</font></a></div>
+    </div>
+     <div class="carousel1-slide">
+      <img src="index12.jpg" alt="Image 1">
+      <div class="carousel1-description"><a href="#"><font color="#fff">Nanas</font></a></div>
+    </div>
+  </div>
+</div><br>
+
+
+
+
+    <!-- Informasi Produk -->
+    <section class="info-produk">
+        <div class="container">
+             <div class="nav">
+             <div class="produk-list">
+                  <div class="produk-item">
+                <img src="index13.jpg"align="center"width="80px"height="80px">
+                    <h5>Mangga-Aromanis</h5>
+                    <h5><small>&#11088&#11088&#11088&#11088&#11088</small></h5>
+                    <p><small>Rp100.000</small></p>
+                     <a href="#" class="buy-button"><small>Buy</small></a>
+                </div>
+                  <div class="produk-item">
+                <img src="index14.jpg"align="center"width="80px"height="80px">
+                    <h5>Durian-Musang King</h5>
+                   <h5><small>&#11088&#11088&#11088&#11088&#11088</small></h5>
+                    <p><small>Rp100.000</small></p>
+                     <a href="#" class="buy-button"><small>Buy</small></a>
+                </div>
+                   <div class="produk-item">
+                <img src="index15.jpg"align="center"width="80px"height="80px">
+                    <h5>Pisang-Ambon</h5>
+                   <h5><small>&#11088&#11088&#11088&#11088&#11088</small></h5>
+                    <p><small>Rp100.000</small></p>
+                     <a href="#" class="buy-button"><small>Buy</small></a>
+                </div>
+            </div>
+    </section><br>
+        
+
+    <!-- Rekomendasi Produk -->
+    <section class="rekomendasi-produk">
+        <div class="container">
+             <div class="nav">
+            <div class="produk-list">
+                 <div class="produk-item">
+                <img src="index16.jpg"align="center"width="80px"height="80px">
+                    <h5>Alpukat-Maluma</h5>
+                   <h5><small>&#11088&#11088&#11088&#11088&#11088</small></h5>
+                    <p><small>Rp100.000</small></p>
+                     <a href="#" class="buy-button"><small>Buy</small></a>
+                </div>
+                   <div class="produk-item">
+                <img src="index17.jpg"align="center"width="80px"height="80px">
+                    <h5>Jeruk-clementine</h5>
+                   <h5><small>&#11088&#11088&#11088&#11088&#11088</small></h5>
+                    <p><small>Rp100.000</small></p>
+                     <a href="#" class="buy-button"><small>Buy</small></a>
+                </div>
+                <div class="produk-item">
+                <img src="index18.jpg"align="center"width="80px"height="80px">
+                    <h5>Nanas-Queen</h5>
+                   <h5><small>&#11088&#11088&#11088&#11088&#11088</small></h5>
+                    <p><small>Rp100.000</small></p>
+                     <a href="#" class="buy-button"><small>Buy</small></a>
+                </div>
+        
+            
+        </div>
+    </section>
+
+
+
+
+<h3><p align="center"><font color="gold">Kategori Resep Buah-Buahan</font></p></h3>
+  <div class="scroll-container">
+        <div class="scroll-item">
+            <img src="index19.jpg" alt="Berita 1">
+            <h4>Resep-Jus Buah</h4>
+            <span></span>
+        </div>
+        <div class="scroll-item">
+            <img src="index20.jpg" alt="Berita 2">
+            <h4>Resep-Salad Buah</h4>
+            <span></span>
+        </div>
+        <div class="scroll-item">
+            <img src="index21.jpg" alt="Berita 3">
+            <h4>Resep-Puding/Agar-agar Buah</h4>
+            <span></span>
+        </div>
+        <div class="scroll-item">
+            <img src="index22.jpg" alt="Berita 4">
+            <h4>Resep-Bolu Buah</h4>
+            <span></span>
+        </div>
+       <div class="scroll-item">
+            <img src="index23.png" style="height:153px">
+            <h4>Resep-Permen Buah</h4>
+            <span></span>
+        </div>
+    </div>
+
+
+
+
+    <!-- Info Perusahaan -->
+    <section class="info-perusahaan">
+        <div class="container">
+<p><div class="login-container">
+                <h4></h4>
+                <form>
+                <div class="form-control">
+                          <label for="name">Nama:</label>
+                 <input type="text"id="name"name="name"placeholder="Nama"required>
+                  <div class="form-control">
+                           <label for="email">Email:</label>
+                 <input type="text"id="email"name="email"placeholder="Email"required>
+                  <div class="form-control">
+                            <label for="message">Pesan:</label>
+                 <textarea id="message"name="message"placeholder="Message"required></textarea>
+                 </div>
+                 <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                </form> 
+                </div><br><br></p>
+            <h2><img src="logo.png"style="width:150px;height:40px;"></h2>
+            <p>.</p>
+            <div class="contact-info">
+              <h3>Ikuti Kami</h3>
+            <a href="https://www.facebook.com/profile.php?id=61558576457158"><font size="6"align="right"style="color:#fff;"><i class="fab fa-facebook"></i></font></a>
+<a href="https://www.bing.com/ck/a?!&&p=752da3ba657615c4JmltdHM9MTcyNzkxMzYwMCZpZ3VpZD0xNWNjMWRmMS1kNzRjLTZiNTUtMWVmYS0wOGZjZDYxYTZhZDgmaW5zaWQ9NTE5NQ&ptn=3&ver=2&hsh=3&fclid=15cc1df1-d74c-6b55-1efa-08fcd61a6ad8&psq=twt&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS8_dHdfcD10d3QjOn46dGV4dD1Ud2l0dGVyIGlzIGEgc29jaWFsIHBsYXRmb3JtIHdoZXJlIHlvdSBjYW4gZm9sbG93IHRvcGljcyw&ntb=1"><font size="6"align="right"style="color:#fff;"><i class="fab fa-twitter"></i></font></a>
+<a href="https://www.instagram.com/dzin0982?igsh=YzljYTk1ODg3Zg=="><font size="6"align="right"style="#fff;"><i class="fab fa-instagram"></i></font></a>
+<a href="https://www.youtube.com/@IL_cook"><font size="6"align="right"style="color:#fff;"><i class="fab fa-youtube"></i></font></a>
+<a href="https://www.youtube.com/@IL_cook"><font size="6"align="right"style="color:#fff;"><i class="fas fa-envelope"></i></font></a>         
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <p>Copyright 2024 FruitsFood.Semua hak dilindungi undang-undang.</p>  
+    </footer>
+<script>
+ let slideIndex = 0;
+        const slideInterval = 7000; // Waktu berganti slide dalam milidetik (5000 ms = 5 detik)
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slides img');
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+
+            // Geser gambar dengan transformasi
+            const offset = -slideIndex * 100; // Hitung offset berdasarkan indeks slide
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        // Tampilkan slide pertama dan mulai autoplay
+        showSlides();
+        setInterval(() => {
+            slideIndex++;
+            showSlides();
+        }, slideInterval);
+
+
+ const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        menuToggle.addEventListener('click', function() {
+            navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+            menuToggle.classList.toggle('active');
+            menuToggle.textContent = menuToggle.classList.contains('active') ? '✖' : '☰';
+        });
+
+       
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('data-section');
+
+                // Sembunyikan semua section
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Tampilkan section yang sesuai
+                document.getElementById(sectionId).classList.add('active');
+                navbar.style.display = 'none'; // Sembunyikan navbar setelah klik
+                menuToggle.classList.remove('active');
+                menuToggle.textContent = '☰'; // Kembalikan ikon menu ke bentuk garis tiga
+            });
+        });
+
+        document.getElementById('theme-toggle').addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+
+
+
+
+         const carouselTrack = document.getElementById('carousel-track');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slideWidth = document.querySelector('.carousel-slide').offsetWidth;
+    let currentSlide = 0;
+
+    // Infinite scroll logic
+    function moveToSlide(slideIndex) {
+      carouselTrack.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+
+      // Handle infinite loop
+      if (slideIndex >= 3) { // If it's the last duplicated slide, go back to the original first
+        setTimeout(() => {
+          carouselTrack.style.transition = 'none'; // Disable transition for instant move
+          carouselTrack.style.transform = `translateX(0px)`;
+          currentSlide = 0;
+        }, 300); // Match the CSS transition timing
+      } else if (slideIndex < 0) { // If it's before the first slide, go to the original last
+        setTimeout(() => {
+          carouselTrack.style.transition = 'none';
+          carouselTrack.style.transform = `translateX(-${2 * slideWidth}px)`;
+          currentSlide = 2;
+        }, 300);
+      }
+    }
+
+
+    // Button click events
+    nextBtn.addEventListener('click', () => {
+      currentSlide++;
+      carouselTrack.style.transition = 'transform 0.3s ease';
+      moveToSlide(currentSlide);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentSlide--;
+      carouselTrack.style.transition = 'transform 0.3s ease';
+      moveToSlide(currentSlide);
+    });
+
+    // Optional: Resize event to recalculate slide width if window resizes
+    window.addEventListener('resize', () => {
+      const newSlideWidth = document.querySelector('.carousel-slide').offsetWidth;
+      const shift = newSlideWidth / slideWidth; // Calculate proportion change
+      carouselTrack.style.transform = `translateX(-${currentSlide * newSlideWidth}px)`;
+    });
+
+</script>
+      
+</body>
+</html>
+
+
+
+
